@@ -25,7 +25,6 @@ public class TechManager : MonoBehaviour
 
         while (!operation.isDone)
         {
-            print(operation.progress);
             yield return null;
         }
         switch (state)
@@ -37,7 +36,6 @@ public class TechManager : MonoBehaviour
                 NetworkManager.Singleton.StartHost();
                 break;
             case Static.StateNetManager.Server:
-                print("server");
                 NetworkManager.Singleton.StartServer();
                 break;
             case Static.StateNetManager.Shutdown:
